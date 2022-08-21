@@ -49,7 +49,6 @@ export const useUserFormHook = (props: UserFormProps) => {
     formValues,
     showModal,
     errorMessage,
-    showErrorModal,
     hideErrorModal,
     submitHandler,
     valueChangeHandler

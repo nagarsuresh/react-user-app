@@ -10,13 +10,18 @@ export interface ModalProps {
 const Modal: FC<ModalProps> = (props) => {
   return (
     <div className={styles.modal}>
-      <div className={styles.modalBackground}></div>
-      <div className={styles.modalContainer}>
+      <div
+        tabIndex={0}
+        className={styles.modalBackground}
+      ></div>
+      <div className={styles.modalContainer} onClick={() => props.callback()}>
         <div className={styles.modalBody}>
           <div className={styles.title}>{props.title}</div>
           <div className={styles.contents}>{props.message}</div>
           <div className={styles.footer}>
-            <button className={styles.btnOk} onClick={()=> props.callback()}>Okay</button>
+            <button className={styles.btnOk} onClick={() => props.callback()}>
+              Okay
+            </button>
           </div>
         </div>
       </div>

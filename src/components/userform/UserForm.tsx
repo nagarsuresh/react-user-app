@@ -19,7 +19,7 @@ const UserForm: FC<UserFormProps> = (props: UserFormProps) => {
   } = useUserFormHook(props);
 
   return (
-    <div>
+    <>
       <form className={styles.form} onSubmit={submitHandler}>
         <div className={styles.fieldContainer}>
           <label htmlFor="name">Username</label>
@@ -54,7 +54,7 @@ const UserForm: FC<UserFormProps> = (props: UserFormProps) => {
       ) : (
         ""
       )}
-    </div>
+    </>
   );
 };
 
